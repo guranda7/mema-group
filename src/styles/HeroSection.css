@@ -1,0 +1,18 @@
+.hero-container{
+    background-image: url('../images/modern-interior-design-living-room-with-large-white-classic-panels-and-wall-mock-up-3d-render-illustration-4k-animation-scene-video.jpg');
+    margin-top: 70px;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+} 
+
+.text-field{
+    margin-left: 500px;
+}
+
+.subtitle{
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 45px;
+    color:  #F5F5F5
+}

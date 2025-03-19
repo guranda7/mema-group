@@ -1,0 +1,28 @@
+ .service-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    
+ }
+
+ .card-container{
+    display: flex;
+    gap: 200px;
+ }
+
+ .card{
+    background-color: #F8F8FF;
+    width: 250px;       /* Fixed width */
+  height: 300px;      /* Fixed height */
+  overflow: hidden;   /* Prevent content overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+ }
