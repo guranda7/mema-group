@@ -1,26 +1,58 @@
 .about-us-section{
     background-color: #8FBC8F;
+    padding: 50px 20px; /* Add padding for better spacing */
+    text-align: center;
+    overflow: hidden;
 }
 
 .sofa-image{
-    width: 600px;
-    height: 400px;
-    padding-top: 100px;
+    width: 100%; /* Make image responsive */
+    max-width: 600px; /* Prevent it from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 50px; /* Adjust padding for better spacing */
+
 }
 
 .about-us-features{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
-    gap: 150px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 50px; /* Reduce gap for better responsiveness */
+    text-align: center; /* Center text for better mobile experience */
+    max-width: 100%;
 }
 .about-us-text{
-    width: 500px;
+    width: 100%;
+    max-width: 500px; /* Prevent overly wide text */
     font-size: 20px;
+    padding: 20px; /* Add padding for better readability */
 }
 
 .h2-title {
-    margin-left: 150px;
-    padding-top: 50px;
+    margin: 0 auto; /* Center title */
+    padding-top: 30px; /* Adjust padding for better spacing */
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .about-us-features {
+        gap: 80px; /* Reduce spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-features {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 30px;
+    }
+    
+    .sofa-image {
+        padding-top: 20px;
+        max-width: 90%;
+    }
+
+    .about-us-text {
+        font-size: 18px; /* Adjust font size for readability */
+    }
 }

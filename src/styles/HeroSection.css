@@ -22,6 +22,7 @@
     font-size: 3vw; /* Adjusts dynamically based on screen width */
     color: #F5F5F5;
     max-width: 90%;
+    justify-content: flex-start;
     text-align: center;
 }
 

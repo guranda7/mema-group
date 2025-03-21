@@ -75,6 +75,26 @@
     padding-top: 25px
 }
 
+
+.drawer-menu {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  background-color: #FAEBD7;
+}
+
+.drawer-menu span {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.drawer-menu span:hover {
+  color: #2F4F4F;
+}
+
 @media (max-width: 768px) {
     .first-navbar {
       flex-direction: column;
@@ -127,4 +147,6 @@
     .enter-feature {
       font-size: 13px;
     }
-  }
+  } 
+
+ 

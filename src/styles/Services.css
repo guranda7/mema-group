@@ -9,12 +9,15 @@
 
  .card-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 200px;
  }
 
  .card{
-    background-color: #F8F8FF;
-    width: 250px;       /* Fixed width */
+   background-color: #F8F8FF;
+   width: 100%;  
+   max-width: 250px;     /* Fixed width */
   height: 300px;      /* Fixed height */
   overflow: hidden;   /* Prevent content overflow */
   display: flex;
@@ -26,3 +29,17 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
  }
+
+ @media (max-width: 1024px) {
+   .card-container {
+       gap: 100px; /* Adjust gap */
+   }
+}
+
+@media (max-width: 768px) {
+   .card-container {
+       flex-direction: column;
+       align-items: center;
+       gap: 30px;
+   }
+}
