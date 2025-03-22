@@ -98,7 +98,7 @@ function Navbar () {
                 <Link to="/" className="nav-link">Home</Link> {/* Link to Home page */}
                 <Link to="/services" className="nav-link">Services</Link> {/* Link to Services page */}
                 <Link to="/calculator" className="nav-link">Calculator</Link>
-                <Link to="/gallery" className="nav-link">Gallery</Link>
+                <span>Gallery</span>
                     <span>Blog</span>
                     <span>Contact</span>
                 </div>
