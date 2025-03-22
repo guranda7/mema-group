@@ -1,4 +1,5 @@
 import '../styles/Services.css'
+import HouseRepairCalculator from '../pages/HouseRepairCalculator';
 
 function Services () {
     return(
@@ -25,6 +26,7 @@ function Services () {
                     ensuring a perfect balance between functionality and aesthetics while reflecting the client’s vision.</p>
             </div>
             </div>
+            
         </div>
     )
 }

@@ -5,6 +5,8 @@ import Navbar from './components/Navbar.js';
 import Home from "./pages/Home.js";     
 import PageOfServices from "./pages/PageOfServices.js";   
 import Footer from './components/Footer.js'
+import HouseRepairCalculator from "./pages/HouseRepairCalculator.js";
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<PageOfServices />} />
+        <Route path="/calculator" element={<HouseRepairCalculator/>}/>
+        
       </Routes>
       <Footer/>
     </Router>

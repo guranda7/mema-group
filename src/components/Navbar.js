@@ -97,8 +97,8 @@ function Navbar () {
                 <div className="col-2-2">
                 <Link to="/" className="nav-link">Home</Link> {/* Link to Home page */}
                 <Link to="/services" className="nav-link">Services</Link> {/* Link to Services page */}
-                    <span>Price</span>
-                    <span>Gallery</span>
+                <Link to="/calculator" className="nav-link">Calculator</Link>
+                <Link to="/gallery" className="nav-link">Gallery</Link>
                     <span>Blog</span>
                     <span>Contact</span>
                 </div>
