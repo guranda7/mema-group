@@ -95,6 +95,19 @@
   color: #2F4F4F;
 }
 
+
+.nav-link {
+  text-decoration: none;
+  color:  #696969;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #2F4F4F; /* Change color on hover */
+}
+
+/*
 @media (max-width: 768px) {
     .first-navbar {
       flex-direction: column;
@@ -149,4 +162,17 @@
     }
   } 
 
- 
+ */
+
+ @media (max-width: 569px) {
+  .col-2-2 {
+      display: none; /* Hide menu links */
+  }
+}
+
+/* Show regular menu for larger screens */
+@media (min-width: 568px) {
+  .col-2-2 {
+      display: flex; /* Show menu links */
+  }
+}

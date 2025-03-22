@@ -1,23 +1,20 @@
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import AboutUsSection from './components/AboutUsSection';
-import Footer from './components/Footer';
-import CustomCarousel from './components/CustomCarousel'
-
+import Navbar from './components/Navbar.js';
+import Home from "./pages/Home.js";     
+import PageOfServices from "./pages/PageOfServices.js";   
+import Footer from './components/Footer.js'
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <Services></Services>
-      <AboutUsSection></AboutUsSection>
-      <CustomCarousel></CustomCarousel>
-      <Footer></Footer>
-      
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<PageOfServices />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 

@@ -1,15 +1,21 @@
-
+import React, { useState } from 'react';
 import '../styles/Navbar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
-
+import { IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 
 
 function Navbar () {
-    
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <div className = "container-navbar">
@@ -46,9 +52,51 @@ function Navbar () {
                     <span className="group">Group</span>
                 </div>
 
+
+                <IconButton 
+                    edge="start" 
+                    color="inherit" 
+                    aria-label="menu" 
+                    onClick={toggleMenu} 
+                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                >
+                    <MenuIcon />
+                </IconButton>
+
+
+                <Drawer
+                    anchor="left"
+                    open={isMenuOpen}
+                    onClose={toggleMenu}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                    }}
+                >
+                    <List>
+                        <ListItem button>
+                            <ListItemText primary="Home" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Services" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Price" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Gallery" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Blog" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Contact" />
+                        </ListItem>
+                    </List>
+                </Drawer>
+
                 <div className="col-2-2">
-                    <span>Home</span>
-                    <span>Services</span>
+                <Link to="/" className="nav-link">Home</Link> {/* Link to Home page */}
+                <Link to="/services" className="nav-link">Services</Link> {/* Link to Services page */}
                     <span>Price</span>
                     <span>Gallery</span>
                     <span>Blog</span>

@@ -1,16 +1,21 @@
-import React from "react";
-import HeroSection from "../components/HeroSection";
-import Services from "../components/Services";
-import Testimonials from "../components/Testimonials";
 
-const Home = () => {
-  return (
-    <>
-      <HeroSection />
-      <Services />
-      <Testimonials />
-    </>
-  );
-};
+import HeroSection from '../components/HeroSection.js';
+import Services from '../components/Services.js';
+import AboutUsSection from '../components/AboutUsSection.js';
+import CustomCarousel from '../components/CustomCarousel.js'
+
+
+function Home () {
+    return(
+      <div className="App">
+      <HeroSection></HeroSection>
+      <Services></Services>
+      <AboutUsSection></AboutUsSection>
+      <CustomCarousel></CustomCarousel>
+ 
+    </div>
+    )
+
+}
 
 export default Home;
