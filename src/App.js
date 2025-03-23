@@ -6,6 +6,10 @@ import Home from "./pages/Home.js";
 import PageOfServices from "./pages/PageOfServices.js";   
 import Footer from './components/Footer.js'
 import HouseRepairCalculator from "./pages/HouseRepairCalculator.js";
+import Gallery from "./pages/Gallery.js";
+import AboutUs from "./pages/AboutUs.js";
+import ContactUs from "./pages/ContactUs.js";
+
 
 function App() {
   return (
@@ -15,9 +19,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<PageOfServices />} />
         <Route path="/calculator" element={<HouseRepairCalculator/>}/>
-        
+        <Route path="/gallery" element={<Gallery/>}/>
+        <Route path="/about-us" element={<AboutUs/>}/>
+        <Route path="/contact" element={<ContactUs/>}/>
       </Routes>
       <Footer/>
+        
     </Router>
   );
 }

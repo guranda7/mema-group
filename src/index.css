@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Outfit", sans-serif;
   color:  #696969;
-
+  overflow: auto !important;
 }
 
 code {

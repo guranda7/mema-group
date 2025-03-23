@@ -127,6 +127,7 @@ const HouseRepairCalculator = () => {
         margin: "50px auto", // Adds margin from footer
         borderRadius: "12px",
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.2)",
+        
       }}
     >
       <Typography

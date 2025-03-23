@@ -1,15 +1,26 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Link, IconButton } from "@mui/material";
+import { Box, Container, Typography, Grid, IconButton } from "@mui/material";
 import { Facebook, Phone, Email, Place } from "@mui/icons-material";
+import { Link } from "react-router-dom"; // Import Link from React Router
 
 const Footer = () => {
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Calculator", path: "/calculator" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <Box sx={{ backgroundColor: "#5D5353", color: "#fff", py: 3 }}>
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           {/* Left Section */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#A4C2A8", width: "15x" }}>
+            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#A4C2A8" }}>
               MEMA <span style={{ fontWeight: "100", fontSize: "13px", color: "white" }}>Group</span>
             </Typography>
             <Typography variant="body2">Trust your home professionals.</Typography>
@@ -29,10 +40,10 @@ const Footer = () => {
           {/* Middle Section - Navigation */}
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>Navigation</Typography>
-            {["Home", "About Us", "Services", "Price", "Gallery", "Blog", "Contact"].map((item) => (
-              <Typography key={item} variant="body2">
-                <Link href="#" color="inherit" underline="hover">
-                  {item}
+            {navItems.map((item) => (
+              <Typography key={item.name} variant="body2">
+                <Link to={item.path} style={{ color: "inherit", textDecoration: "none" }}>
+                  {item.name}
                 </Link>
               </Typography>
             ))}
