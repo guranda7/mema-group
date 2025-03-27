@@ -68,7 +68,7 @@ const HouseRepairCalculator2 = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "auto", Height: "100vh" }}>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "150px", marginBottom: "200px", Height: "100vh" }}>
       
       <FormControl fullWidth sx={{ maxWidth: 400, margin: "10px auto" }}>
         <InputLabel>{t("selectCategory")}</InputLabel>

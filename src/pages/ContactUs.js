@@ -6,7 +6,7 @@ function ContactUs() {
 
   const { t, i18n } = useTranslation();
   return (
-    <Container maxWidth="sm" sx={{ textAlign: "center", mt: 4, }}>
+    <Container maxWidth="sm" sx={{ textAlign: "center", mt: 4, marginBottom: "190px"}}>
       <Typography variant="h4" gutterBottom>
         {t('contactUs')}
       </Typography>
