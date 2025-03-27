@@ -11,6 +11,7 @@
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+    
 } 
 
 .text-field{
@@ -24,6 +25,12 @@
     max-width: 90%;
     justify-content: flex-start;
     text-align: center;
+    
+    white-space: normal; /* Allow text to wrap normally */
+    word-wrap: break-word; /* Break words if needed */
+    line-height: 1.5; /* Adjust line height if needed */
+    font-size: 3rem; /* Adjust font size if needed */
+    
 }
 
 @media (max-width: 768px) {

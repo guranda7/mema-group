@@ -1,17 +1,21 @@
+import React from 'react'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import '../styles/AboutUsSection.css'
 import image from '../images/grey-sofa.jpg'
 import SeeMoreButton from './SeeMoreButton'
 import { Link } from 'react-router-dom'
 
 function AboutUsSection () {
+    const { t, i18n } = useTranslation();
+
     return(
         <div className="about-us-section">
             
             <div className="about-us-features">
                 <div className="about-us-text">
-                   <h1>About The Company</h1>
-                    <p>Welcome to MEMA Group, your trusted partner in home repair, painting, wallpaper installation, flooring, and more. 
-                       Since our establishment in 2019, we have been committed to transforming homes with quality craftsmanship, attention to detail, and outstanding customer service.</p>
+                   <h1>{t('aboutUsTitle')}</h1>
+                    <p>{t('aboutDescription')}</p>
                 
                 <Link to="/about-us" ><SeeMoreButton></SeeMoreButton></Link>
                 

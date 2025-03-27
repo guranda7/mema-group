@@ -1,29 +1,25 @@
 import '../styles/Services.css'
-import HouseRepairCalculator from '../pages/HouseRepairCalculator';
+import { useTranslation } from 'react-i18next';
 
 function Services () {
+    const { t, i18n } = useTranslation();
+   
+
     return(
         <div className="service-container">
-            <div><h2>Services</h2></div>
+            <div><h2>{t('services')}</h2></div>
             <div className="card-container">
             <div className="card">
-                <h3>House Construction</h3>
-                <p> Building a house requires expert planning,high-quality materials,
-                    nd skilled craftsmanship to ensure safety, durability, and energy efficiency. 
-                    Professionals handle everything from foundation work to roofing,
-                    ensuring the structure meets all legal and safety standards.</p>
+                <h3>{t('cardTitle1')}</h3>
+                <p>{t('cardText1')}</p>
             </div>
             <div className="card">
-                <h3>Renovation Works</h3>
-                <p>Renovations improve the functionality, aesthetics, and value of a property. 
-                   Whether it’s fixing structural issues, upgrading interiors, or modernizing outdated spaces, 
-                   professionals ensure the work is done correctly, avoiding costly mistakes and ensuring long-term durability.</p>
+                <h3>{t("cardTitle2")}</h3>
+                <p>{t('cardText2')}</p>
             </div>
             <div className="card">
-                <h3>Design</h3>
-                <p>A well-thought-out design enhances both the appearance and usability of a space. 
-                    Professional designers create layouts that optimize space, lighting, and style, 
-                    ensuring a perfect balance between functionality and aesthetics while reflecting the client’s vision.</p>
+                <h3>{t("cardTitle3")}</h3>
+                <p>{t('cardText3')}</p>
             </div>
             </div>
             

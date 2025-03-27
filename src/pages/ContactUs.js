@@ -1,10 +1,14 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { Container, Typography, Stack, Link, IconButton } from "@mui/material";
 import { Facebook, Instagram, LinkedIn, Email, Phone } from "@mui/icons-material";
 function ContactUs() {
+
+  const { t, i18n } = useTranslation();
   return (
     <Container maxWidth="sm" sx={{ textAlign: "center", mt: 4, }}>
       <Typography variant="h4" gutterBottom>
-        Contact Us
+        {t('contactUs')}
       </Typography>
       
       <Stack spacing={2} alignItems="center">

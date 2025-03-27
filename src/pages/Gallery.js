@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Box, Typography, Modal, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import image1 from '../images/image1.jpg'
@@ -11,45 +12,53 @@ import image7 from '../images/image7.jpg'
 import image8 from '../images/image8.jpg'
 import image9 from '../images/image8.jpg'
 import image10 from '../images/image10.jpg'
+import { t } from "i18next";
 // Sample data for projects
-const projects = [
-  {
-    id: 1,
-    name: "Modern Apartment Renovation",
-    description: "A complete overhaul of a modern apartment.",
-    headerImage: image2,
-    images: [
-      image1,
-      image2,
-      image3,
-      image4
-    ],
-  },
-  {
-    id: 2,
-    name: "Luxury Villa Construction",
-    description: "A luxury villa built with top-notch materials.",
-    headerImage: image5,
-    images: [
-      image6,
-      image7,
-      image5,
-    ],
-  },
-  {
-    id: 3,
-    name: "Commercial Office Space Upgrade",
-    description: "Upgrading a corporate office for modern functionality.",
-    headerImage: image9,
-    images: [
-      image8,
-      image9,
-      image10,
-    ],
-  },
-];
+
+
+
+
 
 const Gallery = () => {
+
+  const { t, i18n } = useTranslation();
+  const projects = [
+    {
+      id: 1,
+      name: t('galleryTitle1'),
+      description: t('galleryDescription1'),
+      headerImage: image2,
+      images: [
+        image1,
+        image2,
+        image3,
+        image4
+      ],
+    },
+    {
+      id: 2,
+      name: t('galleryTitle2'),
+      description: t('galleryDescription2'),
+      headerImage: image5,
+      images: [
+        image6,
+        image7,
+        image5,
+      ],
+    },
+    {
+      id: 3,
+      name: t('galleryTitle3'),
+      description: t('galleryDescription3'),
+      headerImage: image9,
+      images: [
+        image8,
+        image9,
+        image10,
+      ],
+    },
+  ];
+
   const [open, setOpen] = useState(false);
   const [selectedImages, setSelectedImages] = useState([]);
 

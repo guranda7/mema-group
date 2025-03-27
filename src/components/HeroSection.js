@@ -1,22 +1,36 @@
+import React from 'react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 import '../styles/HeroSection.css'
-import Services from './Services';
-import image from '../images/modern-interior.jpg'
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import CustomInput from './CustomInput';
+import { Button } from "@mui/material";
+import BookingForm from './BookingForm';
 
-function HeroSection () {
-    return (
-        <div className="hero-container">
-         <CustomInput></CustomInput>
-        <div className="subtitle">
-         <p> Affordable & reliable 
-            <br/>repairs for your home.
-          <br/>Book a service today!</p>
-        </div>
-        </div>
-    )
+function HeroSection() {
+  const { t } = useTranslation(); // Access translation function
+
+  const [showForm, setShowForm] = useState(false);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+
+  return (
+    <div className="hero-container">
+      <CustomInput />
+      <div className="subtitle">
+        <p>{t('heroSubtitle')}</p>  {/* Translates dynamically */}
+      </div>
+      
+      <Button variant="contained" onClick={toggleForm} sx={{background: " #2F4F4F"}}>
+        {t("bookNow")}
+      </Button>
+
+      {showForm && <BookingForm />}
+    
+    </div>
+  );
 }
 
 export default HeroSection;
