@@ -1,0 +1,7 @@
+* {
+    font-family: 'Noto Sans Georgian', sans-serif !important; /* Georgian font */
+  }
+
+  html[lang="en"] * {
+    font-family: 'Outfit', sans-serif !important; /* Default font for English */
+  }

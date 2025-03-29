@@ -30,13 +30,21 @@ function BookingForm() {
   };
 
   return (
-    <Box sx={{ padding: 2, maxWidth: 400, margin: "auto", backgroundColor: "#f5f5f5", borderRadius: 2 }}>
+    <Box
+      sx={{
+        padding: 2,
+        maxWidth: 400,
+        margin: "auto",
+        backgroundColor: "#f5f5f5",
+        borderRadius: 2,
+      }}
+    >
       <Typography variant="h6" sx={{ marginBottom: 2 }}>
         {t("bookText1")}
       </Typography>
       {isSubmitted ? (
         <Typography variant="body1" color="success.main">
-          {t( "bookText2")}
+          {t("bookText2")}
         </Typography>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -67,7 +75,12 @@ function BookingForm() {
             onChange={handleChange}
             sx={{ marginBottom: 2 }}
           />
-          <Button type="submit" variant="contained" fullWidth sx={{background: " #2F4F4F"}}>
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            sx={{ background: " #2F4F4F" }}
+          >
             {t("submit")}
           </Button>
         </form>

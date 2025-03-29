@@ -1,7 +1,7 @@
 
 import HeroSection from '../components/HeroSection.js';
 import Services from '../components/Services.js';
-import AboutUsSection from '../components/AboutUsSection.js';
+import AboutUsSection from '../components/AboutUsSection.jsx';
 import CustomCarousel from '../components/CustomCarousel.js'
 
 
